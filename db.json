@@ -1,0 +1,23 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "login": "json-server",
+      "password": "typicode",
+      "token": "some Base64 code",
+      "registrationDate": "12/02/2024",
+      "lastOnlineDate": "28/02/2024",
+      "accountImage": "some Base64 code",
+      "userName": "user name",
+      "userSurname": "user surname",
+      "userBirthday": "15/05/1996"
+    }
+  ],
+  "post": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}

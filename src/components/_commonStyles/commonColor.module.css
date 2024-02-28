@@ -1,0 +1,12 @@
+:root {
+    --white: #fff;
+    --whiteDark: #cccccc;
+    --black: #000;
+    --blackLight: #181818;
+    --blackSoftLight: #222222;
+    --graySoftLight: #333333;
+    --gray: #aaaaaa;
+    --blackLightTransparentLow: #181818de;
+    --orange: #FFA500;
+    --orangeDark: #FF8C00;
+}

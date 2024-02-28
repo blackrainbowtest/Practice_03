@@ -1,0 +1,7 @@
+@import "../../../../../../_commonStyles/commonColor.module.css";
+
+.header {
+    font-size: 2em;
+    color: var(--orange);
+    text-transform: uppercase;
+}

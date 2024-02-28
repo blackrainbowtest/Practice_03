@@ -1,0 +1,21 @@
+@import "../../../../../../_commonStyles/commonColor.module.css";
+
+.inputBox {
+    position: relative;
+    width: 100%;
+}
+
+.submitButton {
+    padding: 10px;
+    width: 100%;
+    background: var(--orange);
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1.35em;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.submitButton:active {
+    opacity: 0.6;
+}

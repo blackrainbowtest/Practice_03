@@ -1,0 +1,29 @@
+@import "../../../../../../_commonStyles/commonColor.module.css";
+
+.linkBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkItem {
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.linkItem:hover {
+    color: var(--whiteDark);
+}
+
+.linkItemVariant {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--orange);
+    font-weight: 600;
+}
+
+.linkItemVariant {
+    color: var(--orangeDark);
+}

@@ -1,0 +1,36 @@
+@import "../../../../../../_commonStyles/commonColor.module.css";
+
+.inputBox {
+    position: relative;
+    width: 100%;
+}
+
+.inputBody {
+    position: relative;
+    width: 100%;
+    background: var(--graySoftLight);
+    border: none;
+    outline: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.inputLabel {
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: var(--gray);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.inputBody:focus~.inputLabel,
+.inputBody:valid~.inputLabel {
+    transform: translateY(-7.5px);
+    font-size: 0.8em;
+    color: var(--white);
+}
