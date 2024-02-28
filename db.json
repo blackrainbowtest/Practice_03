@@ -4,6 +4,7 @@
       "id": 1,
       "login": "json-server",
       "password": "typicode",
+      "email": "aaa@gmail.com",
       "token": "some Base64 code",
       "registrationDate": "12/02/2024",
       "lastOnlineDate": "28/02/2024",

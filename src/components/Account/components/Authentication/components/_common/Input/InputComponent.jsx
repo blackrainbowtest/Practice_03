@@ -1,6 +1,6 @@
 import styles from "./styles.module.css"
 
-export default function InputComponent({handleChange, type = "text", required = true, autoComplete = "username", label = "label", value = ""}) {
+export default function InputComponent({handleChange, type = "text", required = true, autoComplete = "nope", label = "label", value = ""}) {
   return (
     <div className={styles.inputBox}>
       <input

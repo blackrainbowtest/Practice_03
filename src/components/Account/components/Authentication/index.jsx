@@ -1,21 +1,31 @@
 import AnimatedBackground from "./components/AnumatedBackground";
-import commonStyle from "../../../_commonStyles/commonStyle.module.css";
+import commonDefault from "../../../_commonStyles/commonDefault.module.css";
 import Container from "./components/Container";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import { useState } from "react";
+import PopapComponent from "../../../_commonComponents/PopapComponent";
+import ForgotPassword from "./components/ForgotPassword";
 
 export default function Authentication() {
   const containerStyle = `
-        ${commonStyle.dFlex} ${commonStyle.jcc} ${commonStyle.aic}
+        ${commonDefault.dFlex} ${commonDefault.jcc} ${commonDefault.aic}
     `;
+  const [isForgotPassword, setIsForgotPassword] = useState(false);
 
-  const [isSignIn, setIsSignIn] = useState(true)
+  const [isSignIn, setIsSignIn] = useState(true);
 
   return (
     <div className={containerStyle}>
       <AnimatedBackground />
-      <Container>{isSignIn ? <SignIn setIsSignIn={setIsSignIn} isSignIn={isSignIn} /> : <SignUp setIsSignIn={setIsSignIn} isSignIn={isSignIn} />}</Container>
+      <Container>
+        {isSignIn ? (
+          <SignIn setIsSignIn={setIsSignIn} isSignIn={isSignIn} handleChange={setIsForgotPassword}/>
+        ) : (
+          <SignUp setIsSignIn={setIsSignIn} isSignIn={isSignIn} />
+        )}
+      </Container>
+      {isForgotPassword ? <PopapComponent handleChange={setIsForgotPassword}><ForgotPassword handleChange={setIsForgotPassword}/></PopapComponent> : ""}
     </div>
   );
 }

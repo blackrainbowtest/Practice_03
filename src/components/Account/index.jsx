@@ -10,9 +10,7 @@ export default function Account() {
     <div className={`${commonDebug.borderBlue} ${commonStyle.WHMax}`}>
       {
         isLogin ? (
-            <div>
-                user is logined
-            </div>
+            ""
         ) : <Authentication />
       }
     </div>

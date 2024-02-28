@@ -8,6 +8,8 @@ import LinkComponent from "../_common/Link";
 export default function SignUp({ setIsSignIn, isSignIn }) {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [email, setEmail] = useState("")
 
   const handleSubmitAction = (e) => {
     e.preventDefault();
@@ -22,6 +24,14 @@ export default function SignUp({ setIsSignIn, isSignIn }) {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value)
+  }
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value)
+  }
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -39,7 +49,13 @@ export default function SignUp({ setIsSignIn, isSignIn }) {
           required={true}
           label={"Username"}
           value={login}
-          autoComplete={"username"}
+        />
+        <InputComponent
+          handleChange={handleEmailChange}
+          type={"email"}
+          required={true}
+          label={"Email"}
+          value={email}
         />
         <InputComponent
           handleChange={handlePasswordChange}
@@ -47,10 +63,16 @@ export default function SignUp({ setIsSignIn, isSignIn }) {
           required={true}
           label={"Password"}
           value={password}
-          autoComplete={"current-password"}
+        />
+        <InputComponent
+          handleChange={handleConfirmPasswordChange}
+          type={"password"}
+          required={true}
+          label={"Comfirm password"}
+          value={confirmPassword}
         />
         <LinkComponent handleChange={handleSignIn} isSignIn={isSignIn} />
-        <SubmitButtonComponent value={"Sign up"} />
+        <SubmitButtonComponent value={"Sign in"} />
       </FormComponent>
     </>
   );

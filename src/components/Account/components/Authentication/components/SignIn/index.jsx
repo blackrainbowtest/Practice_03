@@ -5,7 +5,7 @@ import InputComponent from "../_common/Input/InputComponent";
 import { useState } from "react";
 import LinkComponent from "../_common/Link";
 
-export default function SignIn({ setIsSignIn, isSignIn }) {
+export default function SignIn({ setIsSignIn, isSignIn, handleChange }) {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,7 +18,7 @@ export default function SignIn({ setIsSignIn, isSignIn }) {
   const handleForgotPassword = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    console.log("handleForgotPassword");
+    handleChange(prev => !prev)
   };
 
   const handleSignUp = (e) => {
