@@ -7,10 +7,12 @@ export default function Account() {
   const isLogin = useSelector((state) => state?.user?.isLogin);
 
   return (
-    <div className={`${commonDebug.borderBlue} ${commonStyle.WHMax}`}>
+    <div className={`${commonDebug.borderRed}`}>
       {
         isLogin ? (
-            ""
+            <div style={{marginTop: "20px"}}>
+              User profile
+            </div>
         ) : <Authentication />
       }
     </div>

@@ -10,4 +10,19 @@
     --blackLightTransparentHight: #1818185f;
     --orange: #FFA500;
     --orangeDark: #FF8C00;
+
+    /* Background color */
+    --backgroundGraySoftLight: #333333;
+    --backgroundAlert: #ef1c1c89;
+    
+    /* Border color */
+    --borderAlert: #ef535083;
+    --borderWhiteTransparentSoft: #ffffff8d;
+
+
+    /* Text color */
+    --textWhite: #fff;
+    --textGray: #aaaaaa;
+    --textError: #D22B2B;
+
 }

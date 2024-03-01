@@ -8,12 +8,12 @@
 .inputBody {
     position: relative;
     width: 100%;
-    background: var(--graySoftLight);
+    background: var(--backgroundGraySoftLight);
     border: none;
     outline: none;
     padding: 25px 10px 7.5px;
     border-radius: 4px;
-    color: var(--white);
+    color: var(--textWhite);
     font-weight: 500;
     font-size: 1em;
 }
@@ -23,7 +23,7 @@
     left: 0;
     padding: 15px 10px;
     font-style: normal;
-    color: var(--gray);
+    color: var(--textGray);
     transition: 0.5s;
     pointer-events: none;
 }
@@ -32,5 +32,10 @@
 .inputBody:valid~.inputLabel {
     transform: translateY(-7.5px);
     font-size: 0.8em;
-    color: var(--white);
+    color: var(--textWhite);
+}
+
+.errorsBox {
+    font-size: calc(.5vw + .5vh + .5vmin);
+    color: var(--textError);
 }

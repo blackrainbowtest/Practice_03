@@ -1,12 +1,21 @@
 import { Outlet } from "react-router-dom";
-import commonDebug from "../_commonStyles/commonDebug.module.css"
 import commonStyle from "../_commonStyles/commonStyle.module.css"
+import AlertComponent from "../_commonComponents/AlertComponent";
+import { useSelector } from "react-redux";
 
 export default function Layout() {
-
+  const isLogin = useSelector((state) => state?.user?.isLogin);
   return (
-    <div className={`${commonDebug.borderRed} ${commonStyle.WHFull}`}>
-      <Outlet />
+    <div className={`${commonStyle.WHFull}`}>
+      <AlertComponent />
+      {
+        isLogin ? (
+          <>
+            <div>Layout</div>
+            <Outlet />
+          </>
+        ) : <Outlet />
+      }
     </div>
   );
 }

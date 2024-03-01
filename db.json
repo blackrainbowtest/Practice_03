@@ -12,6 +12,12 @@
       "userName": "user name",
       "userSurname": "user surname",
       "userBirthday": "15/05/1996"
+    },
+    {
+      "login": "user1",
+      "password": "$2a$10$TdUU78s2px87Kgiextov9ueZetWv2TnyAUuHQMuSZfydJP0l0K/Fe",
+      "email": "test@gmail.com",
+      "id": 2
     }
   ],
   "post": [
