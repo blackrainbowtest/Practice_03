@@ -3,7 +3,8 @@ import { addUser, checkUser, getUser } from "./userAPI"
 
 const initialState = {
     data: [],
-    errorMessage: ["test", "test2", "test3"],
+    errorMessage: [],
+    successMessage: ["sss"],
     loginErrors: {},
     loading: false,
     isLogin: false,
@@ -17,10 +18,13 @@ export const userSlice = createSlice({
             state.errorMessage = action.payload
         },
         setLogin: (state, action) => {
-            state.currentItem = action.payload
+            state.isLogin = action.payload
         },
         setLoginErrors: (state, action) => {
             state.loginErrors = action.payload
+        },
+        setSuccessMessage: (state, action) => {
+            state.successMessage = action.payload
         }
     },
     extraReducers: (builder) => {
@@ -65,4 +69,4 @@ export const userSlice = createSlice({
 // export slice to app/store
 export default userSlice.reducer
 
-export const { setError, setLogin, setLoginErrors } = userSlice.actions
+export const { setError, setLogin, setLoginErrors, setSuccessMessage } = userSlice.actions

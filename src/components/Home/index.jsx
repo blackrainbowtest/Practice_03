@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import Account from "../Account";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -11,8 +10,8 @@ export default function Home() {
   
   console.log(data);
   return (
-    <>
-      <Account />
-    </>
+    <div>
+      lalala
+    </div>
   );
 }

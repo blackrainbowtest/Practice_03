@@ -12,11 +12,18 @@
     --orangeDark: #FF8C00;
 
     /* Background color */
+    --backgroundBlackLight: #181818;
+    --backgroundBlackLightTransparentLow: #181818de;
     --backgroundGraySoftLight: #333333;
-    --backgroundAlert: #ef1c1c89;
+    --backgroundAlertDanger: #ef1c1c89;
+    --backgroundAlertSuccess: #35ef1c89;
+    --backgroundOrange: #FFA500;
+    --backgroundOrangeDark: #FF8C00;
+    --backgroundOrangeDarker: #ff7300;
     
     /* Border color */
-    --borderAlert: #ef535083;
+    --borderAlertDanger: #ef535083;
+    --borderAlertSuccess: #50ef6b83;
     --borderWhiteTransparentSoft: #ffffff8d;
 
 

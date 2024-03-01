@@ -2,6 +2,7 @@ import { useRoutes } from "react-router-dom"
 import PageNotFound from "../components/PageNotFound"
 import Home from "../components/Home"
 import Layout from "../components/Layout"
+import ProfileComponent from "../components/Account/components/Profile"
 
 const Router = () => {
     // make routing
@@ -15,6 +16,9 @@ const Router = () => {
             children: [
                 {
                     path: "/", element: <Home />
+                },
+                {
+                    path: "/profile", element: <ProfileComponent />
                 },
             ]
         }
