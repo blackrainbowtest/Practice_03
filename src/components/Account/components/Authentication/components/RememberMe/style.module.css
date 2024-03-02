@@ -1,0 +1,6 @@
+@import "../../../../../_commonStyles/commonColor.module.css";
+
+.rememberText {
+    color: var(--textWhite);
+    margin-left: 5px;
+}

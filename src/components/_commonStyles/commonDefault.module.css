@@ -2,10 +2,26 @@
     display: flex;
 }
 
+.fdc {
+    flex-direction: column;
+}
+
 .jcc {
     justify-content: center;
 }
 
 .aic {
     align-items: center;
+}
+
+.jcs {
+    justify-content: flex-start;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.relative {
+    position: relative;
 }

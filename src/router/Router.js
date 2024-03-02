@@ -5,7 +5,6 @@ import Layout from "../components/Layout"
 import ProfileComponent from "../components/Account/components/Profile"
 
 const Router = () => {
-    // make routing
     const routing = useRoutes([
         
         {
@@ -23,8 +22,6 @@ const Router = () => {
             ]
         }
     ])
-    // export routing
     return routing
 }
-// export router
 export default Router

@@ -1,0 +1,20 @@
+.profileBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 25px;
+}
+
+.mainContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitButton {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

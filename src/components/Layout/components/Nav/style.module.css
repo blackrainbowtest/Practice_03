@@ -43,7 +43,7 @@
 .navLink:nth-child(3):hover~.animation {
     width: 120px;
     left: 240px;
-    background-color: var(--backgroundOrange);
+    background-color: var(--backgroundOrangeDarker);
 }
 .startHome,
 .navLink:nth-child(2):hover~.animation {
@@ -55,5 +55,24 @@
 .navLink:nth-child(1):hover~.animation {
     width: 120px;
     left: 0;
+    background-color: var(--backgroundOrange);
+}
+
+.startProfile,
+.navLink:nth-child(3):hover~.animation {
+    width: 120px;
+    left: 240px;
     background-color: var(--backgroundOrangeDarker);
+}
+.startProfile,
+.navLink:nth-child(1):hover~.animation {
+    width: 120px;
+    left: 0;
+    background-color: var(--backgroundOrange);
+}
+.startProfile,
+.navLink:nth-child(2):hover~.animation {
+    width: 120px;
+    left: 120px;
+    background-color: var(--backgroundOrangeDark);
 }

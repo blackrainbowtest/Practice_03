@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Container from "../Container";
-import FormComponent from "../_common/Form";
-import HeaderComponent from "../_common/Header";
-import InputComponent from "../_common/Input/InputComponent";
-import SubmitButtonComponent from "../_common/SubmitButton";
+import FormComponent from "../../../../_common/Form";
+import HeaderComponent from "../../../../_common/Header";
+import InputComponent from "../../../../_common/Input/InputComponent";
+import SubmitButtonComponent from "../../../../_common/SubmitButton";
 
 export default function ForgotPassword({handleChange}) {
   const [email, setEmail] = useState("")

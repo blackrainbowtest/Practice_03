@@ -1,6 +1,6 @@
-* Հավաքել login/registration form: 
+* Հավաքել login/registration form:                                              | DONE
+* Հնարավորություն լինի user-ի account-ը նույնպես edit անել username, password։  | On progress...
 * Ամեն user կարենա փոստ անի(փոստը ունի վերնագիր ու առավելագույնը 10 նկար)
 * Փոստերը լայքի։
 * Ամեն user կարա իրա արած փոստերը edit անի փոխի փոստի վերնագիրը
 * Կամայական նկար փոստից հեռացնի կամ հենց ամբողջ փոստը ջնջի։
-* Հնարավորություն լինի user-ի account-ը նույնպես edit անել username, password։

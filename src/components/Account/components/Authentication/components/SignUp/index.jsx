@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import FormComponent from "../_common/Form";
-import HeaderComponent from "../_common/Header";
-import InputComponent from "../_common/Input/InputComponent";
-import SubmitButtonComponent from "../_common/SubmitButton";
-import LinkComponent from "../_common/Link";
+import FormComponent from "../../../../_common/Form";
+import HeaderComponent from "../../../../_common/Header";
+import InputComponent from "../../../../_common/Input/InputComponent";
+import SubmitButtonComponent from "../../../../_common/SubmitButton";
+import LinkComponent from "../../../../_common/Link";
 import { passwordCheck } from "../../../../../../utils/dataCheckLogic";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, checkUser } from "../../../../../../features/user/userAPI";

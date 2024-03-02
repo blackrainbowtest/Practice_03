@@ -8,6 +8,7 @@ const initialState = {
     loginErrors: {},
     loading: false,
     isLogin: false,
+    isRemember: false,
 }
 
 export const userSlice = createSlice({
@@ -25,7 +26,13 @@ export const userSlice = createSlice({
         },
         setSuccessMessage: (state, action) => {
             state.successMessage = action.payload
-        }
+        },
+        setIsRemember: (state, action) => {
+            state.isRemember = action.payload
+        },
+        setLoading: (state, action) => {
+            state.loading = action.payload
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -36,10 +43,14 @@ export const userSlice = createSlice({
                 state.loading = false;
                 state.data = action.payload;
                 state.isLogin = true
+                if (state.isRemember) {
+                    localStorage.setItem('accessToken', action.payload.token);
+                }
             })
             .addCase(getUser.rejected, (state, action) => {
                 state.loading = false;
                 state.errorMessage = [...state.errorMessage, action.payload]
+                localStorage.removeItem('accessToken');
             })
             .addCase(addUser.pending, (state) => {
                 state.loading = true;
@@ -47,10 +58,13 @@ export const userSlice = createSlice({
             .addCase(addUser.fulfilled, (state, action) => {
                 state.loading = false;
                 state.data = action.payload;
+                state.isLogin = true
+                localStorage.removeItem('accessToken');
             })
             .addCase(addUser.rejected, (state, action) => {
                 state.loading = false;
                 state.errorMessage = [...state.errorMessage, action.payload]
+                localStorage.removeItem('accessToken');
             })
             .addCase(checkUser.pending, (state) => {
                 state.loading = false;
@@ -69,4 +83,4 @@ export const userSlice = createSlice({
 // export slice to app/store
 export default userSlice.reducer
 
-export const { setError, setLogin, setLoginErrors, setSuccessMessage } = userSlice.actions
+export const { setError, setLogin, setLoginErrors, setSuccessMessage, setIsRemember } = userSlice.actions

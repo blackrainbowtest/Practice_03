@@ -19,7 +19,13 @@
     --backgroundAlertSuccess: #35ef1c89;
     --backgroundOrange: #FFA500;
     --backgroundOrangeDark: #FF8C00;
-    --backgroundOrangeDarker: #ff7300;
+    --backgroundOrangeDarker: #ff5900;
+    /* Profile background */
+    --profileBackgroundGraySoftLight: #333333;
+    --profileBackgroundGraySoftDark: #232323;
+    
+    /* Profile Circle color */
+    --profileCircleColor: #ffffff33;
     
     /* Border color */
     --borderAlertDanger: #ef535083;
@@ -31,5 +37,12 @@
     --textWhite: #fff;
     --textGray: #aaaaaa;
     --textError: #D22B2B;
+
+    /* Loader color */
+    --loaderBlackLight: #181818;
+    --loaderOrange: #FFA500;
+    --loaderGradientShadow: #0000;
+    --loaderGradientBlack: #000;
+
 
 }

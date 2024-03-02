@@ -1,4 +1,4 @@
-@import "../../../../../../_commonStyles/commonColor.module.css";
+@import "../../../_commonStyles/commonColor.module.css";
 
 .header {
     font-size: 2em;

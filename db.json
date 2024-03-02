@@ -1,23 +1,17 @@
 {
   "user": [
     {
-      "id": 1,
-      "login": "json-server",
-      "password": "typicode",
-      "email": "aaa@gmail.com",
-      "token": "some Base64 code",
-      "registrationDate": "12/02/2024",
-      "lastOnlineDate": "28/02/2024",
-      "accountImage": "some Base64 code",
-      "userName": "user name",
-      "userSurname": "user surname",
-      "userBirthday": "15/05/1996"
-    },
-    {
       "login": "user1",
-      "password": "$2a$10$TdUU78s2px87Kgiextov9ueZetWv2TnyAUuHQMuSZfydJP0l0K/Fe",
+      "password": "$2a$10$u4UWUYngLHbTXmNWLgLv5O0jeidI3A8Yi2FbPZGfBtB8IANY6yUlm",
       "email": "test@gmail.com",
-      "id": 2
+      "token": "$2a$10$J1iVyu9Zcz1G.SFtTZZvKO2I6Hy35b.LZQtrpZo.qxaI8.doscQi2",
+      "registrationDate": "01/03/2024",
+      "lastOnlineDate": "02/03/2024",
+      "accountImage": "",
+      "userName": "",
+      "userSurname": "",
+      "userBirthday": "",
+      "id": 1
     }
   ],
   "post": [

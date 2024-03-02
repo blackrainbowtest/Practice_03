@@ -1,11 +1,12 @@
-import HeaderComponent from "../_common/Header";
-import FormComponent from "../_common/Form";
-import SubmitButtonComponent from "../_common/SubmitButton";
-import InputComponent from "../_common/Input/InputComponent";
+import HeaderComponent from "../../../../_common/Header";
+import FormComponent from "../../../../_common/Form";
+import SubmitButtonComponent from "../../../../_common/SubmitButton";
+import InputComponent from "../../../../_common/Input/InputComponent";
 import { useState } from "react";
-import LinkComponent from "../_common/Link";
+import LinkComponent from "../../../../_common/Link";
 import { useDispatch } from "react-redux";
 import { getUser } from "../../../../../../features/user/userAPI";
+import RememberMeComponent from "../RememberMe";
 
 export default function SignIn({ setIsSignIn, isSignIn, handleChange }) {
   const [login, setLogin] = useState("user1");
@@ -73,6 +74,7 @@ export default function SignIn({ setIsSignIn, isSignIn, handleChange }) {
           isSignIn={isSignIn}
           handleForgotPassword={handleForgotPassword}
         />
+        <RememberMeComponent />
         <SubmitButtonComponent value={"Sign in"} />
       </FormComponent>
     </>

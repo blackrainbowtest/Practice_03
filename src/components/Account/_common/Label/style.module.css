@@ -1,0 +1,31 @@
+@import "../../../_commonStyles/commonColor.module.css";
+
+.labelBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.labelBody {
+    position: relative;
+    min-width: 250px;
+    min-height: 51px;
+    background: var(--backgroundGraySoftLight);
+    border: none;
+    outline: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: var(--textWhite);
+    font-weight: 500;
+    font-size: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titleBody {
+    color: var(--textWhite);
+    font-weight: 900;
+    min-width: 90px;
+    margin-right: 10px;
+}

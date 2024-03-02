@@ -1,0 +1,48 @@
+@import "../../_commonStyles/commonColor.module.css";
+
+.loaderMain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--loaderBlackLight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 100px;
+    display: grid;
+    background: radial-gradient(farthest-side, var(--loaderOrange) 98%, var(--loaderGradientShadow)) center/30px 100% no-repeat;
+    --mask:
+        radial-gradient(12px at left 15px top 50%, var(--loaderGradientShadow) 95%, var(--loaderGradientBlack)),
+        radial-gradient(12px at center, var(--loaderGradientShadow) 95%, var(--loaderGradientBlack)),
+        radial-gradient(12px at right 15px top 50%, var(--loaderGradientShadow) 95%, var(--loaderGradientBlack));
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+    animation: l2 1s infinite alternate;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    grid-area: 1/1;
+    height: 30px;
+    aspect-ratio: 1;
+    background: var(--loaderOrange);
+    border-radius: 50%;
+}
+
+.loader:after {
+    margin-left: auto;
+}
+
+@keyframes l2 {
+    to {
+        width: 50px;
+    }
+}
