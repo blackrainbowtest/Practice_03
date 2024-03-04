@@ -1,0 +1,11 @@
+@import "../../../_commonStyles/commonColor.module.css";
+
+.mainContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--profileBackgroundGraySoftDark);  
+    background: linear-gradient(to left, var(--profileBackgroundGraySoftDark), var(--profileBackgroundGraySoftLight));
+    position: relative;
+}

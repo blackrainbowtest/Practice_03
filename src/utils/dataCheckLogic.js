@@ -1,14 +1,11 @@
 export const passwordCheck = (passwordValue, setDataErrors, dataErrors) => {
-    // Проверки для различных требований
     const hasUppercase = /[A-Z]/.test(passwordValue);
     const hasLowercase = /[a-z]/.test(passwordValue);
     const hasDigit = /\d/.test(passwordValue);
     const hasSpecialChar = /[@$!%*?&]/.test(passwordValue);
 
-    // Общая проверка для минимальной длины
     const hasMinLength = passwordValue.length >= 8;
 
-    // Формируем сообщения об ошибках
     const errors = [];
 
     if (!hasUppercase) {
@@ -47,10 +44,57 @@ export const passwordCheck = (passwordValue, setDataErrors, dataErrors) => {
         }
     }
 
-    if (errors.length === 0) {
-        console.log("Пароль валиден");
+    if (errors.length === 0 || passwordValue.length === 0) {
         setDataErrors({ ...dataErrors, password: [] });
     } else {
         setDataErrors({ ...dataErrors, password: errors.join("") });
+    }
+}
+
+export const loginCheck = (loginValue, setDataErrors, dataErrors) => {
+    const allowedCharactersRegex = /^[a-zA-Z0-9._]*$/;
+    if (allowedCharactersRegex.test(loginValue)) {
+        setDataErrors({ ...dataErrors, login: [] });
+    } else {
+        setDataErrors({
+            ...dataErrors,
+            login: "Invalid characters are not allowed",
+        });
+    }
+}
+
+export const userNameCheck = (userName, setDataErrors, dataErrors) => {
+    const allowedCharactersRegex = /^[a-zA-Z0-9._]*$/;
+    if (allowedCharactersRegex.test(userName)) {
+        setDataErrors({ ...dataErrors, userName: [] });
+    } else {
+        setDataErrors({
+            ...dataErrors,
+            userName: "Invalid characters are not allowed",
+        });
+    }
+}
+
+export const userSurnameCheck = (userSurnameValue, setDataErrors, dataErrors) => {
+    const allowedCharactersRegex = /^[a-zA-Z0-9._]*$/;
+    if (allowedCharactersRegex.test(userSurnameValue)) {
+        setDataErrors({ ...dataErrors, userSurname: [] });
+    } else {
+        setDataErrors({
+            ...dataErrors,
+            userSurname: "Invalid characters are not allowed",
+        });
+    }
+}
+
+export const emailCheck = (emailValue, setDataErrors, dataErrors) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$/;
+    if (emailRegex.test(emailValue)) {
+        setDataErrors({ ...dataErrors, email: [] });
+    } else {
+        setDataErrors({
+            ...dataErrors,
+            email: "Invalid characters are not allowed",
+        });
     }
 }
