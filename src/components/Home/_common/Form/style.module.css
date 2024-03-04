@@ -1,0 +1,14 @@
+.formContainer {
+    gap: 25px;
+    /* transform: translate(-50%, -50%); */
+    width: 400px;
+    background: var(--blackSoftLight);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px var(--blackLightTransparentLow);
+}

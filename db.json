@@ -4,21 +4,38 @@
       "login": "user1",
       "password": "$2a$10$u4UWUYngLHbTXmNWLgLv5O0jeidI3A8Yi2FbPZGfBtB8IANY6yUlm",
       "email": "test@gmail.com",
-      "token": "$2a$10$J1iVyu9Zcz1G.SFtTZZvKO2I6Hy35b.LZQtrpZo.qxaI8.doscQi2",
+      "token": "$2a$10$RxGBmj4lR5G45T715hW72u2P597rCfNFAHXRw/TjXaz0vXlAXvnSG",
       "registrationDate": "01/03/2024",
-      "lastOnlineDate": "02/03/2024",
+      "lastOnlineDate": "04/03/2024",
       "accountImage": "",
       "userName": "",
-      "userSurname": "",
-      "userBirthday": "",
+      "userSurname": "asf",
+      "userBirthday": "2024-02-29",
       "id": 1
     }
   ],
   "post": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "text": "some comment",
+      "images": [],
+      "createDate": "01/03/2024",
+      "createTime": "13:30:55",
+      "likes": [
+        1
+      ],
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "text": "second comment",
+      "images": [],
+      "createDate": "02/03/2024",
+      "createTime": "13:30:55",
+      "likes": [
+        1
+      ],
+      "userId": 1
     }
   ]
 }

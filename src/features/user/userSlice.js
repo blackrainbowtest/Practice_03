@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { addUser, checkUser, getUser } from "./userAPI"
+import { addUser, checkUser, getUser, patchUser } from "./userAPI"
 
 const initialState = {
     data: [],
@@ -51,6 +51,17 @@ export const userSlice = createSlice({
                 state.loading = false;
                 state.errorMessage = [...state.errorMessage, action.payload]
                 localStorage.removeItem('accessToken');
+            })
+            .addCase(patchUser.pending, (state) => {
+                state.loading = true;
+            })
+            .addCase(patchUser.fulfilled, (state, action) => {
+                state.loading = false;
+                state.data = action.payload;
+            })
+            .addCase(patchUser.rejected, (state, action) => {
+                state.loading = false;
+                state.errorMessage = [...state.errorMessage, action.payload]
             })
             .addCase(addUser.pending, (state) => {
                 state.loading = true;
