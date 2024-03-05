@@ -4,7 +4,7 @@ import { addUser, checkUser, getUser, patchUser } from "./userAPI"
 const initialState = {
     data: [],
     errorMessage: [],
-    successMessage: ["sss"],
+    successMessage: [],
     loginErrors: {},
     loading: false,
     isLogin: false,
@@ -43,13 +43,16 @@ export const userSlice = createSlice({
                 state.loading = false;
                 state.data = action.payload;
                 state.isLogin = true
+                if (!state.successMessage.some((msg) => msg.message === `User ${action.payload.login} enter success.`)) {
+                    state.successMessage = [...state.successMessage, { id: state.successMessage.length > 0 ? state.successMessage[state.successMessage.length - 1].id + 1 : 1, message: `User ${action.payload.login} enter success.`, exit: false }]
+                }
                 if (state.isRemember) {
                     localStorage.setItem('accessToken', action.payload.token);
                 }
             })
             .addCase(getUser.rejected, (state, action) => {
                 state.loading = false;
-                state.errorMessage = [...state.errorMessage, action.payload]
+                state.errorMessage = [...state.errorMessage, { id: state.errorMessage.length > 0 ? state.errorMessage[state.errorMessage.length - 1].id + 1 : 1, message: action.payload, exit: false }]
                 localStorage.removeItem('accessToken');
             })
             .addCase(patchUser.pending, (state) => {
@@ -61,7 +64,7 @@ export const userSlice = createSlice({
             })
             .addCase(patchUser.rejected, (state, action) => {
                 state.loading = false;
-                state.errorMessage = [...state.errorMessage, action.payload]
+                state.errorMessage = [...state.errorMessage, { id: state.errorMessage.length > 0 ? state.errorMessage[state.errorMessage.length - 1].id + 1 : 1, message: action.payload, exit: false }]
             })
             .addCase(addUser.pending, (state) => {
                 state.loading = true;
@@ -74,7 +77,7 @@ export const userSlice = createSlice({
             })
             .addCase(addUser.rejected, (state, action) => {
                 state.loading = false;
-                state.errorMessage = [...state.errorMessage, action.payload]
+                state.errorMessage = [...state.errorMessage, { id: state.errorMessage.length > 0 ? state.errorMessage[state.errorMessage.length - 1].id + 1 : 1, message: action.payload, exit: false }]
                 localStorage.removeItem('accessToken');
             })
             .addCase(checkUser.pending, (state) => {
@@ -82,11 +85,11 @@ export const userSlice = createSlice({
             })
             .addCase(checkUser.fulfilled, (state, action) => {
                 state.loading = false;
-                state.loginErrors = {...state.loginErrors, ...action.payload};
+                state.loginErrors = { ...state.loginErrors, ...action.payload };
             })
             .addCase(checkUser.rejected, (state, action) => {
                 state.loading = false;
-                state.errorMessage = [...state.errorMessage, action.payload]
+                state.errorMessage = [...state.errorMessage, { id: state.errorMessage.length > 0 ? state.errorMessage[state.errorMessage.length - 1].id + 1 : 1, message: action.payload, exit: false }]
             })
     }
 })

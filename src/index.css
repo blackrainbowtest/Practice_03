@@ -1,6 +1,8 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+
 }
 
 code {
@@ -15,5 +17,4 @@ code {
   font-family: 'Quicksand', sans-serif;
   top: 0px;
   left: 0px;
-  /* overflow: hidden; */
 }

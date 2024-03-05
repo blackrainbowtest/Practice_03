@@ -1,0 +1,29 @@
+@import "../../../_commonStyles/commonColor.module.css";
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 94.5%;
+    padding: 15px;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.mainContainer::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px var(--scrollBarBoxShadow);
+	background-color: var(--scrollBarBackground);
+    border-radius: 10px;
+}
+
+.mainContainer::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+	background-color: var(--scrollBarBackground);
+}
+
+.mainContainer::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--scrollBarThumbBackground);	
+	background-image: var(--scrollBarThumbBackgroundImage)
+}

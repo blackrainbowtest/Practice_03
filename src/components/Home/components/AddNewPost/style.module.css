@@ -1,9 +1,10 @@
 @import "../../../_commonStyles/commonColor.module.css";
 
 .postBox {
-    position: fixed;
-    top: 92vh;
-    left: 94vw;
+    position: absolute;
+    top: calc(100vh - 100px);
+    left: calc(100vw - 65px);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     background-color: var(--backgroundOrangeDark);
     color: var(--textWhite);
@@ -15,4 +16,12 @@
     width: 60px;
     height: 60px;
     cursor: pointer;
+    user-select: none;
+}
+
+.mainContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

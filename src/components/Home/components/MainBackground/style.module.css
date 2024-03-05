@@ -3,8 +3,7 @@
 .mainContainer {
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
     background: var(--profileBackgroundGraySoftDark);  
     background: linear-gradient(to left, var(--profileBackgroundGraySoftDark), var(--profileBackgroundGraySoftLight));
     position: relative;

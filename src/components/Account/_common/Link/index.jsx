@@ -15,7 +15,7 @@ export default function LinkComponent({
         ""
       )}
       <div className={styles.linkItemVariant} onClick={handleChange}>
-        SignUp
+        {isSignIn ? "SignUp" : "SignIn"}
       </div>
     </div>
   );
