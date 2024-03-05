@@ -23,10 +23,10 @@
     /* Profile background */
     --profileBackgroundGraySoftLight: #333333;
     --profileBackgroundGraySoftDark: #232323;
-    
+
     /* Profile Circle color */
     --profileCircleColor: #ffffff33;
-    
+
     /* Border color */
     --borderAlertDanger: #ef535083;
     --borderAlertSuccess: #50ef6b83;
@@ -44,5 +44,16 @@
     --loaderGradientShadow: #0000;
     --loaderGradientBlack: #000;
 
-
+    /* Scrollbar color */
+    --scrollBarBoxShadow: #0000004d;
+    --scrollBarBackground: #F5F5F5;
+    --scrollBarThumbBackground: #F90;
+    --scrollBarThumbBackgroundImage: -webkit-linear-gradient(45deg,
+            #ffffff33 25%,
+            transparent 25%,
+            transparent 50%,
+            #ffffff33 50%,
+            #ffffff33 75%,
+            transparent 75%,
+            transparent)
 }

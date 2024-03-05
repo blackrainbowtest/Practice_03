@@ -32,7 +32,7 @@ export default function NavComponent() {
         <div
           className={styles.navLink}
           onClick={() => {
-            dispatch(setSuccessMessage([...successMessage, "Exit successful"]))
+            dispatch(setSuccessMessage([...successMessage, {id: successMessage[successMessage.length - 1]?.id || 0  + 1, message: "Exit successful", exit: false}]))
             localStorage.removeItem('accessToken');
             dispatch(setLogin(false));
           }}

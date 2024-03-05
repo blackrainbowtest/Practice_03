@@ -3,8 +3,8 @@ import { getPost } from "./postAPI"
 
 const initialState = {
     data: [],
-    errorMessage: ["Post error"],
-    successMessage: ["Post success"],
+    errorMessage: [],
+    successMessage: [],
     loading: false
 }
 
@@ -30,7 +30,7 @@ export const postSlice = createSlice({
             })
             .addCase(getPost.rejected, (state, action) => {
                 state.loading = false;
-                state.errorMessage = [...state.errorMessage, action.payload]
+                state.errorMessage = [...state.errorMessage, {id: state.errorMessage.length > 0 ? state.errorMessage[state.errorMessage.length - 1].id + 1 : 1, message: action.payload, exit: false}]
             })
     }
 })

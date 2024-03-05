@@ -4,30 +4,30 @@ import MainBackground from "./components/MainBackground";
 import { useDispatch, useSelector } from "react-redux";
 import { getPost } from "../../features/posts/postAPI";
 import PostComponent from "./components/PostComponent";
-
+import PostBoxComponent from "./components/PostsBox";
 
 export default function Home() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const posts = useSelector((state) => state?.post?.data);
 
   useEffect(() => {
-    dispatch(getPost())
-  }, [dispatch])
-  
+    dispatch(getPost());
+  }, [dispatch]);
+
   console.log(posts);
-  
+
   return (
     <MainBackground>
-      {
-        posts.length ? (
+      <PostBoxComponent>
+        {posts.length ? (
           posts.map((post) => {
-            return (
-              <PostComponent key={post.id}/>
-            )
+            return <PostComponent key={post.id} />;
           })
-        ): <h1 style={{color: "white"}}>No data</h1>
-      }
-      <AddNewPost/>
+        ) : (
+          <h1 style={{ color: "white" }}>No data</h1>
+        )}
+      </PostBoxComponent>
+      <AddNewPost />
     </MainBackground>
   );
 }
