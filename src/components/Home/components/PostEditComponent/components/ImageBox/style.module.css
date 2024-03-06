@@ -1,0 +1,31 @@
+@import "../../../../../_commonStyles/commonColor.module.css";
+
+.imageBox {
+    position: relative;
+    border: 2px dashed var(--borderImageDownload);
+    text-align: center;
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageBox:hover {
+    background-color: var(--imageBackgroundGray);
+}
+
+.imageBox input {
+    width: 100%;
+    height: 100%;
+}
+
+.fileInput {
+    min-height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--imageTextGray);
+}

@@ -12,6 +12,7 @@ import LoaderComponent from "../_commonComponents/LoaderComponent";
 export default function Layout() {
   const isLogin = useSelector((state) => state?.user?.isLogin);
   const loading = useSelector((state) => state?.user?.loading);
+  const loadingPost = useSelector((state) => state?.post?.loading);
   const errorMessage = useSelector((state) => state?.user?.errorMessage);
   const errorPostMessage = useSelector((state) => state?.post?.errorMessage);
   const successMessage = useSelector((state) => state?.user?.successMessage);
@@ -31,7 +32,7 @@ export default function Layout() {
         errorMessage?.length || successMessage?.length || errorPostMessage.length || successPostMessage.length ? <AlertComponent /> : ""
       }
       {
-        loading ? (
+        loadingPost || loading ? (
           <LoaderComponent />
         ) : ""
       }

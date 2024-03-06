@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AddNewPost from "./components/AddNewPost";
 import MainBackground from "./components/MainBackground";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,19 +9,18 @@ import PostBoxComponent from "./components/PostsBox";
 export default function Home() {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state?.post?.data);
+  const [isEdit, setIsEdit] = useState(false)
 
   useEffect(() => {
     dispatch(getPost());
   }, [dispatch]);
-
-  console.log(posts);
 
   return (
     <MainBackground>
       <PostBoxComponent>
         {posts.length ? (
           posts.map((post) => {
-            return <PostComponent key={post.id} />;
+            return <PostComponent key={`${post.id}postComponent`} post={post} />;
           })
         ) : (
           <h1 style={{ color: "white" }}>No data</h1>

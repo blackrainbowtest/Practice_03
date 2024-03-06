@@ -123,7 +123,6 @@ export default function AlertComponent() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [errorMessage, successMessage, errorPostMessage, successPostMessage]);
 
-  console.log(errorMessage);
   return (
     <div className={styles.alertBox}>
       {errorMessage.map((alert, index) => {
