@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./style.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addPost } from "../../../../features/posts/postAPI";
-import PostEditComponent from "../PostEditComponent";
+import PostBodyComponent from "../PostBodyComponent";
 
 export default function AddNewPost() {
   const [isNew, setIsNew] = useState(false);
@@ -44,7 +44,7 @@ export default function AddNewPost() {
   return (
     <>
       {isNew ? (
-        <PostEditComponent
+        <PostBodyComponent
           setSelectedImages={setSelectedImages}
           title={title}
           text={text}

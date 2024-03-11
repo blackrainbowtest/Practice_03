@@ -2,9 +2,13 @@
 
 .postBox {
     width: 100%;
+    max-width: 400px;
     border-radius: 5px;
     padding: 15px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
     border: 1px solid gray;
 }
 
@@ -80,4 +84,75 @@
     border-radius: 3px;
     cursor: pointer;
     background-color: red;
+}
+
+.postImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postImageBox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.postImage img {
+    height: 200px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.imgBtnLt {
+    position: absolute;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 200px;
+    background-color: #00000048;
+    background: linear-gradient(90deg, #000000af 0%, #000000a9 59%, #00000028 100%);
+    color: gray;
+    font-size: 20px;
+    font-weight: 900;
+    z-index: 1300;
+    cursor: pointer;
+    opacity: .9;
+    user-select: none;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.postImageBox:hover .imgBtnGt,
+.postImageBox:hover .imgBtnLt
+{
+    display: flex;
+}
+
+.imgBtnGt {
+    position: absolute;
+    left: 270px;
+    width: 30px;
+    height: 200px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000048;
+    background: linear-gradient(90deg, #00000028 0%, #000000a9 41%, #000000af 100%);
+    color: gray;
+    font-size: 20px;
+    font-weight: 900;
+    z-index: 1300;
+    cursor: pointer;
+    opacity: .9;
+    user-select: none;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.imgBtnGt:hover,
+.imgBtnLt:hover {
+    opacity: 1;
 }

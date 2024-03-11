@@ -7,7 +7,7 @@ import ImageBoxComponent from "./components/ImageBox"
 import TextBoxComponent from "./components/TextBox"
 import styles from "./style.module.css"
 
-export default function PostEditComponent({
+export default function PostBodyComponent({
     setSelectedImages,
     title,
     text,

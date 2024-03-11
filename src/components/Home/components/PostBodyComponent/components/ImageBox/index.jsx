@@ -44,7 +44,7 @@ export default function ImageBoxComponent({setSelectedImages, selectedImages}) {
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
       if (file && selectedImages.length + (i + 1) <= 10) {
-        resizeImage(file, 200, 200, (resizedImage) => {
+        resizeImage(file, 300, 200, (resizedImage) => {
           setSelectedImages((prev) => [...prev, resizedImage]);
         });
       }
