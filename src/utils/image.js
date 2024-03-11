@@ -41,6 +41,9 @@ export function resizeImage(file, maxWidth, maxHeight, callback) {
 };
 
 export async function convertImageToBase64(imageFile) {
+    if (typeof imageFile === "string") {
+        return imageFile
+    }
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
 

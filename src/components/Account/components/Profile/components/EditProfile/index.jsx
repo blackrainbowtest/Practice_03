@@ -51,7 +51,6 @@ export default function EditProfile({ callback }) {
       emailCheck(inputValue, setDataErrors, dataErrors);
       setUserData({ ...userData, [key]: inputValue });
     } else if (key === "userBirthday") {
-      console.log(inputValue);
       setUserData({ ...userData, [key]: inputValue });
     }
     if(inputValue.trim()) {

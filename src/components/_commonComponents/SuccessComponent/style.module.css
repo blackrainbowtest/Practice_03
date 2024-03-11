@@ -1,0 +1,69 @@
+@import "../../_commonStyles/commonColor.module.css";
+
+.popapContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: var(--blackLightTransparentHight);
+}
+
+.successContainer {
+    gap: 25px;
+    /* transform: translate(-50%, -50%); */
+    width: 400px;
+    background: var(--blackSoftLight);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px var(--blackLightTransparentLow);
+}
+
+.successContainer span {
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.answerBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answerBox div {
+    padding: 10px;
+    min-width: 100px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.35em;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noButton {
+    background: var(--backgroundAlertDanger);
+    color: var(--white);
+}
+
+.noButton:active {
+    opacity: 0.6;
+}
+
+.yesButton {
+    background: var(--orange);
+    color: var(--black);
+}
+
+.yesButton:active {
+    opacity: 0.6;
+}

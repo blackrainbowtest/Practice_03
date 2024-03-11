@@ -1,0 +1,59 @@
+@import "../../../../../_commonStyles/commonColor.module.css";
+
+.inputBox {
+    position: relative;
+    width: 100%;
+}
+
+.inputBody {
+    position: relative;
+    width: 100%;
+    background: var(--backgroundGraySoftLight);
+    border: none;
+    outline: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: var(--textWhite);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.inputBody::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px var(--scrollBarBoxShadow);
+	background-color: var(--scrollBarBackground);
+    border-radius: 10px;
+}
+
+.inputBody::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+	background-color: var(--scrollBarBackground);
+}
+
+.inputBody::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--scrollBarThumbBackground);	
+	background-image: var(--scrollBarThumbBackgroundImage)
+}
+
+.inputLabel {
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: var(--textGray);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.inputBody:focus~.inputLabel,
+.inputBody:valid~.inputLabel {
+    transform: translateY(-7.5px);
+    font-size: 0.8em;
+    color: var(--textWhite);
+}
+
+.errorsBox {
+    font-size: calc(.5vw + .5vh + .5vmin);
+    color: var(--textError);
+}

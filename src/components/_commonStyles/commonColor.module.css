@@ -27,10 +27,15 @@
     /* Profile Circle color */
     --profileCircleColor: #ffffff33;
 
+    /* Image BG */
+    --imageBackgroundGray: #cccccc16;
+    --imageBackgroundButtonGray: #cccccc3f;
+
     /* Border color */
     --borderAlertDanger: #ef535083;
     --borderAlertSuccess: #50ef6b83;
     --borderWhiteTransparentSoft: #ffffff8d;
+    --borderImageDownload: #cccccc;
 
 
     /* Text color */
@@ -55,5 +60,8 @@
             #ffffff33 50%,
             #ffffff33 75%,
             transparent 75%,
-            transparent)
+            transparent);
+
+    /* Text Image color */
+    --imageTextGray: #cccccc;
 }

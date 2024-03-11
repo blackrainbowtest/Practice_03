@@ -1,40 +1,64 @@
 import { useState } from "react";
 import styles from "./style.module.css";
-import FormComponent from "../../_common/Form";
-import SubmitButtonComponent from "../../_common/SubmitButton";
-import PopapComponent from "../../../_commonComponents/PopapComponent";
-import TextBoxComponent from "./components/TextBox";
-import ImageBoxComponent from "./components/ImageBox";
-import ChooesedImagesBox from "./components/ChooesedImagesBox";
+import { useDispatch, useSelector } from "react-redux";
+import { addPost } from "../../../../features/posts/postAPI";
+import PostBodyComponent from "../PostBodyComponent";
 
 export default function AddNewPost() {
   const [isNew, setIsNew] = useState(false);
-  const [text, setText] = useState('')
+  const [text, setText] = useState("");
+  const [title, setTitle] = useState("");
+  const [selectedImages, setSelectedImages] = useState([]);
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state?.user?.data);
 
-  const newPostHandle = (e) => {
-    setIsNew((prev) => !prev);
+  const changeTitleHandle = (e) => {
+    const inputValue = e.target.value;
+    setTitle(inputValue);
   };
   const textChangeHandle = (e) => {
-    setText(e.target.value)
-  }
+    const inputValue = e.target.value;
+    setText(inputValue);
+  };
+  const changePostHandle = (e) => {
+    setIsNew((prev) => !prev);
+  };
+  const newPostHandle = (e) => {
+    e.preventDefault();
+    if (text.trim() && title.trim()) {
+      dispatch(
+        addPost({
+          title,
+          text,
+          images: selectedImages,
+          author: user.id,
+        })
+      );
+      setIsNew((prev) => !prev);
+      setSelectedImages([]);
+      setTitle("");
+      setText("");
+    }
+  };
+
   return (
     <>
       {isNew ? (
-        <PopapComponent handleChange={newPostHandle}>
-          <div className={styles.mainContainer} onClick={e => e.stopPropagation()}>
-            <FormComponent handleSubmitAction={newPostHandle}>
-              <TextBoxComponent value={text} callback={textChangeHandle}/>
-              <ImageBoxComponent />
-              <ChooesedImagesBox />
-              <SubmitButtonComponent value={"Send"} />
-            </FormComponent>
-          </div>
-        </PopapComponent>
+        <PostBodyComponent
+          setSelectedImages={setSelectedImages}
+          title={title}
+          text={text}
+          changePostHandle={changePostHandle}
+          newPostHandle={newPostHandle}
+          changeTitleHandle={changeTitleHandle}
+          textChangeHandle={textChangeHandle}
+          selectedImages={selectedImages}
+        />
       ) : (
         ""
       )}
 
-      <div className={styles.postBox} onClick={newPostHandle}>
+      <div className={styles.postBox} onClick={changePostHandle}>
         +
       </div>
     </>
